@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+header {
+    margin: auto;
+    font-size: 2.5vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerCanvas {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#headerButton {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1%;
+    width: 90%;
+    height: 5%;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#displayTitle {
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    width: 20vw;
+    height: 5vh;
+    min-width: fit-content;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 25, 25, 0.50);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 1.5vw;
+    padding: 1.5vw 5vw;
+    border: 0.3vw solid white;
+}
+
+#mainCanvas {
+    position: relative;
+    background-color: white;
+    position: relative;
+    z-index: -1;
+}
+
+#mainButton {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1%;
+    width: 90%;
+    height: 5%;
+}
+
+#leftButton, #rightButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3%;
+    height: 50%;
+}
+
+#leftButton {
+    left: 1%;
+}
+
+#rightButton {
+    right: 1%;
+}
+
+button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.material-symbols-outlined {
+    font-size: 2vw;
+    color: rgba(255, 255, 255, 0.5);
+}
