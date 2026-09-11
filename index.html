@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raytracer</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity:0;
+            transform: translateZ(-10px);
+        }
+        #Viewport {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transform: translateZ(-5px);
+        }
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateZ(10px);
+        }
+        input {
+            transform: translateZ(20px);
+            width: 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="Viewport"></canvas>
+    <div>
+        <b>PARAMETERS</b><br>
+        Pixel Resolution <input type="text" id="PixelRes" value="125"><br>
+        <br><b>LIGHT</b><br>
+        Point Light Intensity <input type="text" id="pI" value="1"><br>
+        Ambient Light Intensity <input type="text" id="aBI" value="64"><br>
+        <br><b>SKY COLOR</b><br>
+        R <input type="text" id="R" value="195"><br>
+        G <input type="text" id="G" value="223"><br>
+        B <input type="text" id="B" value="255"><br>
+    </div>
+
+    <div style="left:50%; transform: translate(-50%, 0);">
+        <b>Press "TAB" to select the input fields</b>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
